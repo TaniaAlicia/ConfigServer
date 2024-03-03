@@ -1,11 +1,9 @@
 #configuracion de api-gateway
-server:
-  port: 8080
 spring:
   application:
     name: api-gateway
-
-#ruteo
+server:
+  port: 8080
   cloud:
     gateway:
       mvc:
