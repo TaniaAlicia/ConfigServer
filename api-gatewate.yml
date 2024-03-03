@@ -1,0 +1,22 @@
+#configuracion de api-gateway
+server:
+  port: 8080
+spring:
+  application:
+    name: api-gateway
+
+#ruteo
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: catalogRoute
+            uri: lb://catalog-service/
+            predicates:
+              - Path=/catalog/**
+
+      
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
