@@ -3,6 +3,9 @@ server:
 spring:
   application:
     name: catalog-service
+  loadbalancer:
+      client:
+        name: movie-service  
     
 eureka:
   client:
