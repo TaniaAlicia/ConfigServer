@@ -1,19 +1,15 @@
 #configuracion de serie-service
-
-server:
-  port: 0
 spring:
-  application:
-    name: serie-service
-  datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3366/movie-dev
-    username: usr-movie
-    password: pwd-movie
-  jpa:
-    hibernate.ddl-auto: update
-    generate-ddl: true
-    show-sql: true
+    mongodb:
+        embedded:
+            version: 4.0.2
+    data:
+        mongodb:
+            database: test
+            port: 27017
+server:
+    port: 0
+    
 
 eureka:
   client:
