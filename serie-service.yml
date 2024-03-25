@@ -1,5 +1,8 @@
 #configuracion de serie-service
+
 spring:
+  application:
+    name: serie-service
     mongodb:
         embedded:
             version: 4.0.2
